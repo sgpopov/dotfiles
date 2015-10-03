@@ -1,0 +1,20 @@
+# create directory and enter it
+mcd() {
+  mkdir -p "$1";
+  cd "$1";
+} 
+
+# enter into a directory and list its content 
+cls() {
+  cd "$1";
+  ll;
+}
+
+# backup a file
+backup() {
+  cp "$1"{,.bak};
+}
+
+md5check() {
+  md5sum "$1" | grep "$2";
+}

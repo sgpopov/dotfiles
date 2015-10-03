@@ -1,0 +1,6 @@
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="/usr/local/bin:/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin"
+
+PHP_AUTOCONF="/usr/local/bin/autoconf"

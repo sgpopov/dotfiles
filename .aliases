@@ -1,0 +1,45 @@
+# Git
+alias push='git push'
+alias branch='git checkout'
+alias gs="git status -s"
+alias git-log='git log --oneline --decorate --all --graph'
+alias git-merge='git merge --no-ff'
+alias git-undo='git reset --soft HEAD~1'
+
+alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+alias edit-phpini="sublime /usr/local/etc/php/5.6/php.ini"
+alias edit-hosts="sublime /etc/hosts"
+alias edit-vhosts="sublime /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf"
+
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+  colorflag="--color"
+else # OS X `ls`
+  colorflag="-G"
+fi
+
+# List all files colorized in long format, including dot files
+alias la="ls -laF ${colorflag}"
+alias ll="ls -liaF ${colorflag}"
+
+# List only directories
+alias lsd='ls -lF ${colorflag} | grep "^d"'
+
+# Display the directory structure recursively in a tree format.
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'" 
+
+# Datetimes
+alias now='date +"%T"'
+alias week='date +%V'
+alias timestamp='date +%s'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
+
+# OS X specific
+alias show-hidden-files="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app"
+alias hide-hidden-files="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app"

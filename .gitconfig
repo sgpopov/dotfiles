@@ -1,0 +1,22 @@
+[user]
+  name = svil4ok
+  email = svil4ok@gmail.com
+
+[push]
+  default = current
+
+[apply]
+  whitespace = fix
+
+[alias]
+  co = checkout
+
+[pull]
+  rebase = true
+
+[rerere]
+  enabled = true
+  autoupdate = true
+
+[core]
+  excludesfile = ~/dotfiles/.gitignore
