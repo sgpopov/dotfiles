@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+
+# Ask for the administrator password upfront
+sudo -v
+
+#===============================================================================
+# General
+#===============================================================================
+
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+#===============================================================================
+# Screen
+#===============================================================================
+
+# Restart automatically if the computer freezes
+sudo systemsetup -setrestartfreeze on
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+#===============================================================================
+# Finder
+#===============================================================================
+
+# Allow quitting via ⌘ + Q; doing so will also hide desktop icons
+defaults write com.apple.finder QuitMenuItem -bool true
+
+# Show Path bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show Status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# Automatically open a new Finder window when a volume is mounted
+defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+#===============================================================================
+# Dock
+#===============================================================================
+
+# Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool true
+
+# Remove the auto-hiding Dock delay
+defaults write com.apple.dock autohide-delay -float 0
+
+# Speed up animation when hiding/showing the Dock
+defaults write com.apple.dock autohide-time-modifier -float 0.3
+
+# Reset Launchpad
+find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
+
+#===============================================================================
+# Safari
+#===============================================================================
+
+# Enable debug menu
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+#===============================================================================
+# Kill affected applications
+#===============================================================================
+
+for app in "Safari" "Dock" "Finder" "SystemUIServer"; do
+  killall "${app}" > /dev/null 2>&1
+done
