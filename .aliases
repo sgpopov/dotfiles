@@ -7,7 +7,7 @@ alias gs="git status -s"
 alias gd="git diff "
 alias ga="git add "
 alias gaa="git add ."
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit | less --tabs=1,5 -RFX"
 alias git-merge='git merge --no-ff'
 alias git-undo='git reset --soft HEAD~1'
 alias git-clean='git reset --hard; git clean -df'
@@ -33,7 +33,7 @@ alias ll="ls -liaF ${colorflag}"
 alias lsd='ls -lF ${colorflag} | grep "^d"'
 
 # Display the directory structure recursively in a tree format.
-alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'" 
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 
 # Datetimes
 alias now='date +"%T"'
