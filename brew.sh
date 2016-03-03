@@ -22,6 +22,7 @@ brew upgrade --all
 brew install wget --with-iri
 brew install git
 brew install git-lfs
+brew install diff-so-fancy
 
 # Install some usefull applications like Chrome, 1Password, VLC, etc.
 brew cask install '1password'
