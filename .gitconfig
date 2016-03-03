@@ -14,6 +14,9 @@
 [pull]
   rebase = true
 
+[merge]
+  tool = opendiff
+
 [rerere]
   enabled = true
   autoupdate = true
