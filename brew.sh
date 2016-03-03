@@ -34,6 +34,7 @@ brew cask install 'macdown'
 brew cask install 'postgres'
 brew cask install 'psequel'
 brew cask install 'sequel-pro'
+brew cask install 'spectacle'
 brew cask install 'vlc'
 
 # Remove outdated versions from the cellar.
