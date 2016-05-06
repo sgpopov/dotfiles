@@ -36,6 +36,7 @@ brew cask install 'psequel'
 brew cask install 'sequel-pro'
 brew cask install 'spectacle'
 brew cask install 'vlc'
+brew cask install 'teamviewer'
 
 # Remove outdated versions from the cellar.
 brew cleanup
