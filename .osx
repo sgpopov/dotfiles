@@ -110,6 +110,19 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 #===============================================================================
+# iTerm
+#===============================================================================
+
+# Install the "Dracula theme" for iTerm (works only if you have iTerm installed)
+open "${HOME}/dotfiles/iterm/Dracula.itermcolors"
+
+# Don’t display the annoying prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+# Install "alias-tips" plugin
+git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM1:-$ZSH/custom}/plugins/alias-tips
+
+#===============================================================================
 # Kill affected applications
 #===============================================================================
 
