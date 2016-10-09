@@ -10,12 +10,27 @@ sudo -v
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "svil4oksMac"
+sudo scutil --set HostName "svil4oksMac"
+sudo scutil --set LocalHostName "svil4oksMac"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "svil4oksMac"
+
+# Set standby delay to 24 hours (default is 1 hour)
+sudo pmset -a standbydelay 86400
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
 #===============================================================================
 # Screen
 #===============================================================================
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
+
+# Never go into computer sleep mode
+systemsetup -setcomputersleep Off > /dev/null
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
