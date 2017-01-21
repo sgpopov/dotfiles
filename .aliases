@@ -26,10 +26,15 @@ alias git-clean='git reset --hard; git clean -df'
 alias stash='git stash --all'
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
-alias vm="ssh vagrant@127.0.0.1 -p 2222"
-alias edit-phpini="sublime /usr/local/etc/php/5.6/php.ini"
-alias edit-hosts="sublime /etc/hosts"
-alias edit-vhosts="sublime /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf"
+# VM
+alias vm-start="vagrant up"
+alias vm-ssh="vagrant ssh"
+alias vm-stop="vagrant halt"
+alias vm-status="vagrant status"
+alias vm-kill="vagrant destroy"
+
+# Laravel
+alias art="php artisan"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
