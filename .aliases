@@ -1,16 +1,29 @@
 # Git
+pull() {
+  if git config remote.upstream.url > /dev/null; then
+      command git pull --rebase upstream master
+  else
+      command git pull --rebase origin master
+  fi
+}
 alias push='git push'
+alias fetch='git fetch --all -p'
+alias sync='pull && push && fetch && git branch --merged | grep -v "\*"'
 alias branch='git checkout'
-alias gcm='git checkout master'
+alias gcm='branch master && sync'
+alias gcd='git checkout develop'
 alias gc='git commit -m '
-alias gs="git status -s"
+alias gs="git status -sb"
 alias gd="git diff "
 alias ga="git add "
 alias gaa="git add ."
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit | less --tabs=1,5 -RFX"
-alias git-merge='git merge --no-ff'
+alias last="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -1 | less --tabs=1,5 -RFX"
+alias merge='git merge --no-ff'
 alias git-undo='git reset --soft HEAD~1'
+alias git-conflicted='git diff --name-only --diff-filter=U'
 alias git-clean='git reset --hard; git clean -df'
+alias stash='git stash --all'
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
