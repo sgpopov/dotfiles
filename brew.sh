@@ -24,11 +24,7 @@ brew install git
 brew install git-lfs
 brew install diff-so-fancy
 
-# Install some usefull applications like Chrome, 1Password, VLC, etc.
-brew cask install '1password'
-brew cask install 'atom'
-brew cask install 'firefox'
-brew cask install 'google-chrome'
+# Install some usefull applications like iTerm, VLC, Sequel Pro, etc.
 brew cask install 'iterm2'
 brew cask install 'macdown'
 brew cask install 'postgres'
@@ -37,6 +33,9 @@ brew cask install 'sequel-pro'
 brew cask install 'spectacle'
 brew cask install 'vlc'
 brew cask install 'teamviewer'
+brew cask install 'virtualbox'
+brew cask install 'vagrant'
+brew cask install 'vagrant-manager'
 
 # Remove outdated versions from the cellar.
 brew cleanup
