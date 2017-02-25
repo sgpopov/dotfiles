@@ -36,6 +36,9 @@ alias vm-kill="vagrant destroy"
 # Laravel
 alias art="php artisan"
 
+# Composer
+alias cdu="composer dump-autoload --optimize"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
   colorflag="--color"
