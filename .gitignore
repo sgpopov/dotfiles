@@ -10,3 +10,7 @@
 # Sublime Text
 *.sublime-workspace
 *.sublime-project
+
+# Laravel Helpers
+_ide_helper.php
+phpstorm.meta.php
