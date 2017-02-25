@@ -1,0 +1,11 @@
+[
+  // SublimePHPCompanion
+  { "keys": ["alt+enter"], "command": "find_use" },
+  { "keys": ["shift+alt+enter"], "args": { "leading_separator": true }, "command": "expand_fqcn" },
+  { "keys": ["f8"], "command": "import_namespace" },
+  { "keys": ["shift+f12"], "command": "goto_definition_scope" },
+  { "keys": ["f7"], "command": "insert_php_constructor_property" },
+
+  // Advanced New File
+  { "keys": ["super+n"], "command": "advanced_new_file_new" }
+]

@@ -1,0 +1,30 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"AlignTab",
+		"BracketHighlighter",
+		"Colorsublime",
+		"DocBlockr",
+		"Git Config",
+		"GitGutter",
+		"Laravel Blade Highlighter",
+		"Material Theme",
+		"Package Control",
+		"PHP Companion",
+		"PHP Getters and Setters",
+		"Phpcs",
+		"Pretty JSON",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SummitLinter",
+		"Vue Syntax Highlight"
+	]
+}
