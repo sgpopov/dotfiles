@@ -59,3 +59,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 for file in ~/dotfiles/.{exports,aliases,functions}; do
     [ -r "$file" ] && source "$file"
 done
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
