@@ -1,9 +1,9 @@
 # Git
 pull() {
   if git config remote.upstream.url > /dev/null; then
-      command git pull --rebase upstream master
+      command git pull --rebase upstream
   else
-      command git pull --rebase origin master
+      command git pull --rebase origin
   fi
 }
 alias push='git push'
@@ -25,7 +25,7 @@ alias git-conflicted='git diff --name-only --diff-filter=U'
 alias git-clean='git reset --hard; git clean -df'
 alias stash='git stash --all'
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-
+alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 # VM
 alias vm-start="vagrant up"
 alias vm-ssh="vagrant ssh"
