@@ -54,6 +54,10 @@ yii() {
       *) command php yii migrate/up ;;
     esac
   else
-    command php yii help
+    if [[ -z "$1" || $1 == '--help' ]]; then
+        command php yii help
+    else
+        command php yii $1
+    fi
   fi
 }
