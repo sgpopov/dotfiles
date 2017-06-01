@@ -1,6 +1,16 @@
 .DS_Store
 .sass-cache
 
+# npm & bower packages
+node_modules
+bower_components
+
+# Cache & Logs.
+.sass-cache
+.php_cs.cache
+npm-debug.log
+.tags*
+
 # JetBrains
 .idea/
 .idea_modules/
@@ -14,3 +24,11 @@
 # Laravel Helpers
 _ide_helper.php
 phpstorm.meta.php
+
+# Thumbnail cache files.
+._*
+Thumbs.db
+
+# Files that might appear on external disks.
+.Spotlight-V100
+.Trashes
