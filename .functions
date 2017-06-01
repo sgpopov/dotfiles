@@ -48,10 +48,10 @@ yii() {
     esac
   elif [[ $1 == "migrate" ]]; then
     case "$2" in
-      "up") command php yii migrate/up ${@:3} ;;
+      "up") command php yii migrate/up ${@:3} --interactive=0 ;;
       "rollback") command php yii migrate/down ${3:-1} ;;
       "history") command php yii migrate/history ;;
-      *) command php yii migrate/up ;;
+      *) command php yii migrate/up ${@:2} --interactive=0 ;;
     esac
   else
     if [[ -z "$1" || $1 == '--help' ]]; then
