@@ -131,6 +131,13 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 #===============================================================================
+# Google Chrome
+#===============================================================================
+
+# Disable swipe navigation gestures
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
+
+#===============================================================================
 # Activity monitor
 #===============================================================================
 
@@ -159,6 +166,14 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 # Install "alias-tips" plugin
 git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM1:-$ZSH/custom}/plugins/alias-tips
+
+
+#===============================================================================
+# Other
+#===============================================================================
+
+# Change where screenshots are saved
+defaults write com.apple.screencapture location ~/Pictures/Screenshots
 
 #===============================================================================
 # Kill affected applications
