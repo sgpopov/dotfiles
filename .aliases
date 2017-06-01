@@ -52,11 +52,12 @@ else # OS X `ls`
 fi
 
 # List all files colorized in long format, including dot files
-alias la="ls -laF ${colorflag}"
-alias ll="ls -liaF ${colorflag}"
+alias la="ls -lahF ${colorflag}"
+alias ll="ls -liahF ${colorflag}"
 
 # List only directories
-alias lsd='ls -lF ${colorflag} | grep "^d"'
+alias lsd='ls -lhF ${colorflag} | grep "^d"'
+alias ld='lsd'
 
 # Display the directory structure recursively in a tree format.
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
