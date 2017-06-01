@@ -51,14 +51,6 @@ plugins=(git copydir extract alias-tips)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 for file in ~/dotfiles/.{exports,aliases,functions}; do
     [ -r "$file" ] && source "$file"
 done
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
