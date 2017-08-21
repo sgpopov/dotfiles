@@ -1,5 +1,6 @@
 {
 	"auto_indent": true,
+	"caret_style": "phase",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
@@ -11,6 +12,7 @@
 		"gray_antialias"
 	],
 	"font_size": 13,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -42,6 +44,7 @@
 		80,
 		120
 	],
+	"save_on_focus_lost": true,
 	"smart_indent": true,
 	"tab_size": 4,
 	"theme": "Material-Theme.sublime-theme",
