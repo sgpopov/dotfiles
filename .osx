@@ -158,8 +158,8 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # iTerm
 #===============================================================================
 
-# Install the "Dracula theme" for iTerm (works only if you have iTerm installed)
-open "${HOME}/dotfiles/iterm/Dracula.itermcolors"
+# Set iTerm colors
+open "${HOME}/dotfiles/iterm/colors.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
