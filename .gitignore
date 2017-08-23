@@ -53,4 +53,4 @@ npm-debug.log
 
 # Laravel Helpers
 _ide_helper.php
-phpstorm.meta.php
+.phpstorm.meta.php
