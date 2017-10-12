@@ -30,7 +30,7 @@ do
 done
 
 # Ruby gems
-gem update
+sudo gem update
 
 # Revoke sudo access again.
 sudo -k

@@ -16,21 +16,24 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
 brew install git
 brew install git-lfs
 brew install diff-so-fancy
+brew install rbenv
 
 # Install some usefull applications like iTerm, VLC, Sequel Pro, etc.
 brew cask install 'iterm2'
 brew cask install 'macdown'
+brew cask install 'phpstorm'
 brew cask install 'postgres'
 brew cask install 'psequel'
 brew cask install 'sequel-pro'
 brew cask install 'spectacle'
+brew cask install 'sublime-text'
 brew cask install 'vlc'
 brew cask install 'teamviewer'
 brew cask install 'virtualbox'
@@ -38,5 +41,5 @@ brew cask install 'vagrant'
 brew cask install 'vagrant-manager'
 
 # Remove outdated versions from the cellar.
-brew cleanup
+brew cleanup --force -s
 brew cask cleanup

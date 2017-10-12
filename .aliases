@@ -71,10 +71,9 @@ alias timestamp='date +%s'
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 
-alias update='sh ~/dotfiles/bin/update'
+alias update='sh ~/dotfiles/bin/update.sh'
 
 # Apps
-alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 
 # OS X specific

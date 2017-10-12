@@ -155,20 +155,6 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 #===============================================================================
-# iTerm
-#===============================================================================
-
-# Set iTerm colors
-open "${HOME}/dotfiles/iterm/colors.itermcolors"
-
-# Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
-# Install "alias-tips" plugin
-git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM1:-$ZSH/custom}/plugins/alias-tips
-
-
-#===============================================================================
 # Other
 #===============================================================================
 
