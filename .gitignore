@@ -54,3 +54,5 @@ npm-debug.log
 # Laravel Helpers
 _ide_helper.php
 .phpstorm.meta.php
+
+.ssh-aliases

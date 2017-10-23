@@ -53,6 +53,6 @@ plugins=(git copydir extract alias-tips)
 
 source $ZSH/oh-my-zsh.sh
 
-for file in ~/dotfiles/.{exports,aliases,functions}; do
+for file in ~/dotfiles/.{exports,aliases,functions,ssh-aliases}; do
     [ -r "$file" ] && source "$file"
 done
