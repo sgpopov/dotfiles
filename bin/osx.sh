@@ -161,6 +161,9 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Change where screenshots are saved
 defaults write com.apple.screencapture location ~/Pictures/Screenshots
 
+# Take screenshots without window shadows
+defaults write com.apple.screencapture disable-shadow -bool true
+
 #===============================================================================
 # Kill affected applications
 #===============================================================================
