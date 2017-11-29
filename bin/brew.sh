@@ -39,6 +39,7 @@ brew cask install 'teamviewer'
 brew cask install 'virtualbox'
 brew cask install 'vagrant'
 brew cask install 'vagrant-manager'
+brew cask install 'macpass'
 
 # Remove outdated versions from the cellar.
 brew cleanup --force -s
