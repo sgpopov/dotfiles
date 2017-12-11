@@ -11,7 +11,7 @@ pull() {
 
 alias push='git push'
 alias fetch='git fetch --all -p'
-alias sync='pull && push && fetch && git branch --merged | grep -v "\*"'
+alias sync='pull && push && fetch && git-merged | grep -v "\*"'
 alias branch='git checkout'
 alias gcm='branch master && sync'
 alias gcd='git checkout develop'
@@ -26,6 +26,7 @@ alias merge='git merge --no-ff'
 alias git-undo='git reset --soft HEAD~1'
 alias git-conflicted='git diff --name-only --diff-filter=U'
 alias git-clean='git reset --hard; git clean -df'
+alias git-merged="git branch --merged"
 alias stash='git stash --all'
 
 # Vagrant
