@@ -24,10 +24,12 @@ brew install git
 brew install git-lfs
 brew install diff-so-fancy
 brew install rbenv
+brew install mariadb
 
 # Install some usefull applications like iTerm, VLC, Sequel Pro, etc.
 brew cask install 'iterm2'
 brew cask install 'macdown'
+brew cask install 'macpass'
 brew cask install 'phpstorm'
 brew cask install 'postgres'
 brew cask install 'psequel'
@@ -39,7 +41,6 @@ brew cask install 'teamviewer'
 brew cask install 'virtualbox'
 brew cask install 'vagrant'
 brew cask install 'vagrant-manager'
-brew cask install 'macpass'
 
 # Remove outdated versions from the cellar.
 brew cleanup --force -s
