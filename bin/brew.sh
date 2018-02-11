@@ -18,13 +18,19 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Install `wget` with IRI support.
 brew install wget --with-iri
 brew install git
 brew install git-lfs
 brew install diff-so-fancy
 brew install rbenv
 brew install mariadb
+brew install redis
+
+brew tap homebrew/homebrew-php
+brew install php72 --with-argon2
+brew install php72-xdebug
+brew install php72-imagick
+brew install php72-redis
 
 # Install some usefull applications like iTerm, VLC, Sequel Pro, etc.
 brew cask install 'iterm2'
