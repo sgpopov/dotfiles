@@ -25,9 +25,13 @@ alias last="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 alias merge='git merge --no-ff'
 alias git-undo='git reset --soft HEAD~1'
 alias git-conflicted='git diff --name-only --diff-filter=U'
-alias git-clean='git reset --hard; git clean -df'
+alias nah="git reset --hard && git clean -df"
+alias git-clean="nah"
 alias git-merged="git branch --merged"
 alias stash='git stash --all'
+alias git-append="git add . && git commit --amend --noedit"
+alias oops="git-append"
+alias wip="git add . && git commit -m 'wip'"
 
 # Vagrant
 alias vm-start="vagrant up"
