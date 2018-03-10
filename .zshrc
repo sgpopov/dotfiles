@@ -56,3 +56,8 @@ source $ZSH/oh-my-zsh.sh
 for file in ~/dotfiles/.{exports,aliases,functions,ssh-aliases}; do
     [ -r "$file" ] && source "$file"
 done
+
+# Load rupa's z if installed
+if command -v brew >/dev/null 2>&1; then
+    [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+fi

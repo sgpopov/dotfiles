@@ -34,3 +34,5 @@ ln -sf ~/dotfiles/sublime/* ~/Library/Application\ Support/Sublime\ Text\ 3/Pack
 #===============================================================================
 
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+
+source ~/.zshrc

@@ -21,6 +21,7 @@ brew upgrade
 brew install wget --with-iri
 brew install git
 brew install git-lfs
+brew install z
 brew install diff-so-fancy
 brew install rbenv
 brew install mariadb

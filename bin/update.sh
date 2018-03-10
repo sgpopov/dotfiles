@@ -34,3 +34,5 @@ sudo gem update
 
 # Revoke sudo access again.
 sudo -k
+
+source ~/.zshrc
