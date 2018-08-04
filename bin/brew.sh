@@ -18,6 +18,7 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+brew install htop
 brew install wget --with-iri
 brew install git
 brew install git-lfs
@@ -27,18 +28,15 @@ brew install rbenv
 brew install mariadb
 brew install redis
 
-brew tap homebrew/homebrew-php
-brew install php72 --with-argon2
-brew install php72-xdebug
-brew install php72-imagick
-brew install php72-redis
-
 # Install some usefull applications like iTerm, VLC, Sequel Pro, etc.
+brew cask install 'cyberduck'
 brew cask install 'iterm2'
+brew cask install 'kap'
 brew cask install 'macdown'
 brew cask install 'macpass'
 brew cask install 'phpstorm'
 brew cask install 'postgres'
+brew cask install 'postman'
 brew cask install 'psequel'
 brew cask install 'sequel-pro'
 brew cask install 'spectacle'
