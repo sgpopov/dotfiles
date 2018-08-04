@@ -6,6 +6,11 @@ mcd() {
   cd "$1";
 }
 
+# move up through directories faster
+up() {
+  cd $(eval printf '../'%.0s {1..$1})
+}
+
 # enter into a directory and list its content
 cls() {
   cd "$1";
