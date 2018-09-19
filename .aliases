@@ -43,6 +43,10 @@ alias vm-kill="vagrant destroy"
 # Laravel
 alias art="php artisan"
 
+function homestead() {
+    ( cd ~/Homestead && vagrant $* )
+}
+
 # Composer
 alias dump="composer dump-autoload"
 alias fresh="rm -rf vendor composer.lock; composer install"
