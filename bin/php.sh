@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-brew tap homebrew/homebrew-php
-brew install php71 --with-argon2
-brew install php71-xdebug
-brew install php71-imagick
-brew install php71-redis
+brew install php
+pecl install xdebug
+pecl install imagick
+pecl install redis
 
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
 
