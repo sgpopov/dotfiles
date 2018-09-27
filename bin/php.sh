@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-brew install php
 pecl install xdebug
 pecl install imagick
-pecl install redis
 
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
 
@@ -27,3 +25,6 @@ composer global require laravel/valet
 
 # PHP_CodeSniffer (phpcs, phpcbf)
 composer global require "squizlabs/php_codesniffer=*"
+
+# Install Laravel Valet
+$HOME/.composer/vendor/bin/valet install

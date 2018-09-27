@@ -26,10 +26,15 @@ brew cask cleanup
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
+# Install Ruby related stuff
+sh ~/dotfiles/bin/ruby.sh
+
+# Install PHP related stuff
+sh ~/dotfiles/bin/php.sh
+
+
 sh ~/dotfiles/bin/osx.sh
 sh ~/dotfiles/bin/iterm.sh
-sh ~/dotfiles/bin/ruby.sh
-sh ~/dotfiles/bin/php.sh
 
 #===============================================================================
 # Node Version Manager (nvm)

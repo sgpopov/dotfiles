@@ -3,9 +3,9 @@
 # Init rbenv
 eval "$(rbenv init -)"
 
-ln -sf ~/dotfiles/.profile ~/.profile
+ln -sf $HOME/dotfiles/.profile $HOME/.profile
 
-source ~/.profile
+source $HOME/.profile
 
 # Install ruby v.2.4.2
 rbenv install 2.4.2
