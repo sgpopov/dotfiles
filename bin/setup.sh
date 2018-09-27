@@ -3,7 +3,29 @@
 # Ask for the administrator password upfront
 sudo -v
 
-sh ~/dotfiles/bin/brew.sh
+# Install Homebrew if not installed
+if test ! $(which brew); then
+    echo "Installing homebrew"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Make sure we’re using the latest Homebrew.
+brew update
+
+# Upgrade any already-installed formulae.
+brew upgrade
+
+# Install all our dependencies with bundle (See Brewfile)
+brew tap homebrew/bundle
+brew bundle
+
+# Remove outdated versions from the cellar.
+brew cleanup -s
+brew cask cleanup
+
+# Make ZSH the default shell environment
+chsh -s $(which zsh)
+
 sh ~/dotfiles/bin/osx.sh
 sh ~/dotfiles/bin/iterm.sh
 sh ~/dotfiles/bin/ruby.sh
