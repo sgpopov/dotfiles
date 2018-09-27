@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Path to your dotfiles installation.
+export DOTFILES=$HOME/dotfiles
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -38,10 +41,10 @@ ZSH_THEME="sorin"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$DOTFILES
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -53,9 +56,9 @@ plugins=(git copydir extract alias-tips)
 
 source $ZSH/oh-my-zsh.sh
 
-for file in ~/dotfiles/.{exports,aliases,functions,ssh-aliases}; do
-    [ -r "$file" ] && source "$file"
-done
+# You may need to manually set your language environment
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Load rupa's z if installed
 if command -v brew >/dev/null 2>&1; then
