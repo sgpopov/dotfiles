@@ -32,6 +32,8 @@ alias stash='git stash --all'
 alias git-append="git add . && git commit --amend --no-edit"
 alias oops="git-append"
 alias wip="git add . && git commit -m 'wip'"
+alias cat="bat"
+alias man="tldr"
 
 # Vagrant
 alias vm-start="vagrant up"

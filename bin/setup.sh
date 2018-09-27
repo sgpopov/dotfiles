@@ -42,6 +42,8 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | 
 # Install the latest stable node
 nvm install stable
 
+npm install -g tldr
+
 #===============================================================================
 # Other
 #===============================================================================
