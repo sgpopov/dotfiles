@@ -48,6 +48,9 @@ npm install -g tldr
 # Other
 #===============================================================================
 
+# Symlink the Mackup config file to the home directory
+ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+
 ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 
 sh ~/dotfiles/bin/iterm.sh
