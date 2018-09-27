@@ -27,14 +27,10 @@ brew cask cleanup
 chsh -s $(which zsh)
 
 # Install Ruby related stuff
-sh ~/dotfiles/bin/ruby.sh
+sh $HOME/dotfiles/bin/ruby.sh
 
 # Install PHP related stuff
-sh ~/dotfiles/bin/php.sh
-
-
-sh ~/dotfiles/bin/osx.sh
-sh ~/dotfiles/bin/iterm.sh
+sh $HOME/dotfiles/bin/php.sh
 
 #===============================================================================
 # Node Version Manager (nvm)
@@ -47,19 +43,17 @@ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | 
 nvm install stable
 
 #===============================================================================
-# Sublime
-#===============================================================================
-
-# Add `subl` to the command line
-ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-
-# Link Sublime preferences
-ln -sf ~/dotfiles/sublime/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-
-#===============================================================================
 # Other
 #===============================================================================
 
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 
-source ~/.zshrc
+sh ~/dotfiles/bin/iterm.sh
+
+# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
+rm -rf $HOME/.zshrc
+ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+
+# Set macOS preferences
+# We will run this last because this will reload the shell
+sh $HOME/dotfiles/bin/osx.sh

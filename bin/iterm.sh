@@ -13,6 +13,6 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM1:-$ZSH/custom}/plugins/alias-tips
 
 # Place the .zshrc in home directory
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 
-source ~/.zshrc
+source $HOME/.zshrc
