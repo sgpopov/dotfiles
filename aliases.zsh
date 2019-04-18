@@ -11,10 +11,10 @@ pull() {
 
 alias push='git push'
 alias fetch='git fetch --all -p'
-alias sync='pull && push && fetch && git-merged | grep -v "\*"'
+alias sync='pull && fetch && git-merged | grep -v "\*"'
 alias branch='git checkout'
 alias gcm='branch master && sync'
-alias gcd='git checkout develop'
+alias gcd='branch develop && sync'
 alias gc='git commit -m '
 alias gs="git status -sb"
 alias gd="git diff "
