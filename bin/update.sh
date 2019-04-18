@@ -11,7 +11,7 @@ sudo softwareupdate -i -a
 # Homebrew
 brew update
 brew upgrade
-brew cleanup --force -s
+brew cleanup -s
 rm -rfv $(brew --cache)/*
 brew tap --repair
 brew prune
