@@ -52,6 +52,10 @@ npm-debug.log
 *.sublime-workspace
 *.sublime-project
 
+# VS Code
+.vscode/
+*.code-workspace
+
 # Laravel Helpers
 _ide_helper.php
 .phpstorm.meta.php
