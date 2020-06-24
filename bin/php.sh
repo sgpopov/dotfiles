@@ -26,5 +26,10 @@ composer global require laravel/valet
 # PHP_CodeSniffer (phpcs, phpcbf)
 composer global require "squizlabs/php_codesniffer=*"
 
+# PHP Mess Detector
+composer global require "phpmd/phpmd"
+
+composer global require "phpstan/phpstan"
+
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install

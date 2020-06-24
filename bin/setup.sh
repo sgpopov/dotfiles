@@ -25,18 +25,12 @@ brew cleanup -s
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
-# Install Ruby related stuff
-sh $HOME/dotfiles/bin/ruby.sh
-
 # Install PHP related stuff
 sh $HOME/dotfiles/bin/php.sh
 
 #===============================================================================
 # Node Version Manager (nvm)
 #===============================================================================
-
-# Install nvm
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
 
 # Install the latest stable node
 nvm install stable
