@@ -14,7 +14,6 @@ brew upgrade
 brew cleanup -s
 rm -rfv $(brew --cache)/*
 brew tap --repair
-brew prune
 brew doctor
 
 # Composer
@@ -28,9 +27,6 @@ for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f2)
 do
     npm --global install --quiet "${package}"
 done
-
-# Ruby gems
-sudo gem update
 
 # Revoke sudo access again.
 sudo -k
