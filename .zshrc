@@ -52,7 +52,7 @@ ZSH_CUSTOM=$DOTFILES
 # Add wisely, as too many plugins slow down shell startup.
 
 # 'alias-tips' - https://github.com/djui/alias-tips
-plugins=(git copydir extract alias-tips)
+plugins=(git copydir extract brew composer)
 
 source $ZSH/oh-my-zsh.sh
 
