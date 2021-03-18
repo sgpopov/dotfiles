@@ -50,7 +50,7 @@ sh ~/dotfiles/bin/iterm.sh
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
-ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
