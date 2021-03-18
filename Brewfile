@@ -55,6 +55,7 @@ cask 'font-source-sans-pro'
 # Install Mac App Store apps
 mas '1Password', id: 1333542190
 mas 'Airmail 3', id: 918858936
+mas 'Easy CSV Editor', id: 1171346381
 mas 'The Unarchiver', id: 425424353
 mas 'Todoist: To-Do List & Tasks', id: 585829637
-mas 'Easy CSV Editor', id: 1171346381
+mas 'ColorSlurp', id: 1287239339
