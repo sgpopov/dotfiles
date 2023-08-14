@@ -29,10 +29,10 @@ alias nah="git reset --hard && git clean -df"
 alias git-clean="nah"
 alias git-merged="git branch --merged"
 alias stash='git stash --all'
-alias git-append="git add . && git commit --amend --no-edit"
+alias git-append="git commit --amend --no-edit"
 alias oops="git-append"
 alias wip="git add . && git commit -m 'wip'"
-alias cat="bat"
+# alias cat="bat"
 alias man="tldr"
 
 # Vagrant

@@ -3,6 +3,9 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/l
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
+# export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"
+# export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"
+
 # Set default installation location used when issuing "brew cask install"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
@@ -17,6 +20,9 @@ export LC_ALL="en_US.UTF-8";
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 
 PHP_AUTOCONF="/usr/local/bin/autoconf"
+
+# source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+# source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 # Node version manager
 export NVM_DIR="$HOME/.nvm"
