@@ -10,12 +10,6 @@ sudo -v
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
-# Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "svil4oksMac"
-sudo scutil --set HostName "svil4oksMac"
-sudo scutil --set LocalHostName "svil4oksMac"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "svil4oksMac"
-
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
 
