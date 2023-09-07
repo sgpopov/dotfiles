@@ -29,31 +29,11 @@ alias nah="git reset --hard && git clean -df"
 alias git-clean="nah"
 alias git-merged="git branch --merged"
 alias stash='git stash --all'
-alias git-append="git add . && git commit --amend --no-edit"
+alias git-append="git commit --amend --no-edit"
 alias oops="git-append"
 alias wip="git add . && git commit -m 'wip'"
-alias cat="bat"
+# alias cat="bat"
 alias man="tldr"
-
-# Vagrant
-alias vm-start="vagrant up"
-alias vm-ssh="vagrant ssh"
-alias vm-stop="vagrant halt"
-alias vm-status="vagrant status"
-alias vm-kill="vagrant destroy"
-
-# Laravel
-alias art="php artisan"
-
-function homestead() {
-    ( cd ~/Homestead && vagrant $* )
-}
-
-# Composer
-alias dump="composer dump-autoload"
-alias fresh="rm -rf vendor composer.lock; composer install"
-alias optimize="composer update --prefer-dist --no-dev; composer dump-autoload --optimize"
-alias cdu="composer dump-autoload --optimize"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -83,9 +63,6 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 
 alias update='sh ~/dotfiles/bin/update.sh'
-
-# Apps
-alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 
 # OS X specific
 alias show-hidden-files="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app"

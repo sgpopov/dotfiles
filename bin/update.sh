@@ -16,10 +16,6 @@ rm -rfv $(brew --cache)/*
 brew tap --repair
 brew doctor
 
-# Composer
-composer self-update
-composer global update --no-dev --prefer-dist
-
 # NPM
 npm update npm -g
 

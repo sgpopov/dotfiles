@@ -25,9 +25,6 @@ brew cleanup -s
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
-# Install PHP related stuff
-sh $HOME/dotfiles/bin/php.sh
-
 #===============================================================================
 # Node Version Manager (nvm)
 #===============================================================================
