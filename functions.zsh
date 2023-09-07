@@ -39,32 +39,3 @@ function fs() {
         du $arg .[^.]* *;
     fi;
 }
-
-# Yii2 Command Line
-yii() {
-  if [[ $1 == "generate" || $1 == "make" ]]; then
-    case "$2" in
-      "controller") command php yii gii/controller ${@:3} ;;
-      "crud") command php yii gii/crud ${@:3} ;;
-      "extension") command php yii gii/extension ${@:3} ;;
-      "form") command php yii gii/form ${@:3} ;;
-      "model") command php yii gii/model ${@:3} ;;
-      "module") command php yii gii/module ${@:3} ;;
-      "migration") command php yii migrate/create --interactive=0 ${@:3} ;;
-      *) command php yii help gii ;;
-    esac
-  elif [[ $1 == "migrate" ]]; then
-    case "$2" in
-      "up") command php yii migrate/up ${@:3} --interactive=0 ;;
-      "rollback") command php yii migrate/down ${3:-1} ;;
-      "history") command php yii migrate/history ;;
-      *) command php yii migrate/up ${@:2} --interactive=0 ;;
-    esac
-  else
-    if [[ -z "$1" || $1 == '--help' ]]; then
-        command php yii help
-    else
-        command php yii $1
-    fi
-  fi
-}
