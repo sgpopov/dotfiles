@@ -66,34 +66,49 @@ if command -v brew >/dev/null 2>&1; then
 fi
 
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/svilen.popov/.composer/vendor/bin
 
 autoload -U add-zsh-hook
+
 load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
+  local nvmrc_path
+  nvmrc_path="$(nvm_find_nvmrc)"
 
   if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+    local nvmrc_node_version
+    nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
     if [ "$nvmrc_node_version" = "N/A" ]; then
       nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+    elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
       nvm use
     fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
+  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  else
     echo "Reverting to nvm default version"
     nvm use default
   fi
 }
+
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/svilen.popov/.composer/vendor/bin
-export PATH="$PATH:$HOME/.nvm/versions/node/v14.4.0/bin"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "$HOME/.local/bin/env"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/svilen.popov/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/svilen/code/notionchef/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/svilen/code/notionchef/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/svilen/code/notionchef/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/svilen/code/notionchef/google-cloud-sdk/completion.zsh.inc'; fi
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"

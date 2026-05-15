@@ -2,6 +2,7 @@
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH"
 
 # Set default installation location used when issuing "brew cask install"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"

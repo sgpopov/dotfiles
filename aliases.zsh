@@ -59,7 +59,7 @@ alias week='date +%V'
 alias timestamp='date +%s'
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 
 alias update='sh ~/dotfiles/bin/update.sh'
