@@ -64,3 +64,8 @@ _ide_helper.php
 *.code-workspace
 
 ssh-aliases.zsh
+
+# AI
+.github/*.instructions.md
+.github/*.prompt.md
+**/.claude/settings.local.json
